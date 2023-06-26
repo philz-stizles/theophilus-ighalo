@@ -1,9 +1,9 @@
-# Theophilus Ighalo's Portfolio
+# Theophilus Ighalo's Portfolio App
 
 ## Table of Contents
 
 (1.) [Setup Next JS App](#setup-next-js-app)
-(2.) [Setup Headless CMS using Strapi](#setup-headless-cms-using-strapi-read-docs--code)
+(2.) [Setup Headless CMS using Strapi](#setup-headless-cms-using-strapi)
 
 ### Setup Next JS App
 
@@ -11,7 +11,7 @@
 
     npx create-next-app . --typescript
 
-### Setup Headless CMS using Strapi [Read Docs & Code](https://github.com/strapi/nextjs-corporate-starter/tree/main)
+### Setup Headless CMS using Strapi
 
     cd cms
 

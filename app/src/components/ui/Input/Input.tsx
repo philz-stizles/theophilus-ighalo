@@ -1,61 +1,30 @@
-import styled from "styled-components";
-
-type InputWrapperProps = {
-  inValid: boolean;
-};
-
-const InputWrapper = styled("div")<InputWrapperProps>`
-  & label {
-    color: ${(props) => (props.inValid ? "red" : "#ccc")};
-  }
-
-  &.invalid label {
-  }
-
-  & input {
-    padding: 2px 4px;
-    border: 1px solid ${(props) => (props.inValid ? "red" : "#ccc")};
-  }
-
-  & input:focus {
-  }
-
-  &.invalid input {
-  }
-
-  @media (max-width: 767px) {
-  }
-
-  @media only screen and (max-width: 767px) {
-  }
-`;
-
-type InputProps = {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
-  type?: string;
-  placeholder?: string;
+  textarea?: boolean;
   error?: string;
   isValid?: boolean;
   isTouched?: boolean;
-};
+}
 
 const Input = ({
   label,
-  type = "text",
+  type = 'text',
   placeholder,
+  textarea = false,
   isValid = false,
   isTouched = false,
 }: InputProps) => {
+  const styles = 'border-2 border-slate-950 px-3 py-3 text-sm';
+  const content = textarea ? (
+    <textarea className={styles} placeholder={placeholder} rows={4}></textarea>
+  ) : (
+    <input className={styles} type={type} placeholder={placeholder} />
+  );
   return (
-    // <InputWrapper className={`${!isValid && isTouched && "invalid"}`}>
-    <InputWrapper inValid={!isValid && isTouched}>
-      {label && (
-        <label>
-          {label}
-          <input type={type} placeholder={placeholder} />
-        </label>
-      )}
-    </InputWrapper>
+    <div className="flex flex-col mb-4 w-full">
+      {label && <label className="font-semibold mb-1">{label}</label>}
+      {content}
+    </div>
   );
 };
 

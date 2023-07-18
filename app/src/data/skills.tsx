@@ -1,47 +1,47 @@
 import { Skill } from '@/types';
-import { IconType } from 'react-icons';
+import { CloudCog, Container, Globe2, LucideIcon, MonitorSmartphone, Server, ServerCog } from 'lucide-react';
 import { IoDesktopSharp } from 'react-icons/io5';
 
-export const skills: (Skill & { icon: IconType })[] = [
+export const skills: (Skill & { icon: LucideIcon })[] = [
   {
     id: '1',
-    icon: IoDesktopSharp,
-    title: 'Web Programming',
+    icon: Globe2,
+    title: 'Web Development',
     description:
       'Build secure, mobile responsive web applications, with performance and SEO optimization.',
   },
   {
     id: '2',
-    icon: IoDesktopSharp,
+    icon: MonitorSmartphone,
     title: 'Mobile Development',
     description:
       'Build secure, native, multi-platform mobile applications, with performance and SEO optimization.',
   },
   {
     id: '3',
-    icon: IoDesktopSharp,
-    title: 'Backend Services',
+    icon: Server,
+    title: 'Backend Development',
     description:
       'Build secure, mobile responsive web applications, with performance and SEO optimization.',
   },
   {
     id: '4',
-    icon: IoDesktopSharp,
-    title: 'Devops Engineer',
+    icon: ServerCog,
+    title: 'DevOps',
     description:
       'Build secure, mobile responsive web applications, with performance and SEO optimization.',
   },
   {
     id: '5',
-    icon: IoDesktopSharp,
-    title: 'Backend Services',
+    icon: CloudCog,
+    title: 'Web Apps & SaaS',
     description:
       'Build secure, mobile responsive web applications, with performance and SEO optimization.',
   },
   {
     id: '6',
-    icon: IoDesktopSharp,
-    title: 'Devops Engineer',
+    icon: Container,
+    title: 'Containerization',
     description:
       'Build secure, mobile responsive web applications, with performance and SEO optimization.',
   },

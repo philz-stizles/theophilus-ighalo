@@ -1,30 +1,36 @@
 import { Stat } from '@/types';
 import { IconType } from 'react-icons';
-import { IoDesktopSharp, IoGitCommitSharp } from 'react-icons/io5';
+import { IoCode, IoDesktopSharp, IoFlag, IoGitCommitSharp, IoHappy, IoLibrary, IoTrailSign } from 'react-icons/io5';
 
 export const stats: (Stat & { icon: IconType })[] = [
   {
     id: '1',
-    icon: IoGitCommitSharp,
+    icon: IoFlag,
     label: 'Projects Completed',
     figure: '50',
   },
   {
     id: '2',
-    icon: IoDesktopSharp,
+    icon: IoHappy,
     label: 'Happy Clients',
     figure: '20',
   },
   {
     id: '3',
-    icon: IoDesktopSharp,
+    icon: IoCode,
     label: 'Lines of code',
     figure: '102M',
   },
   {
     id: '4',
-    icon: IoDesktopSharp,
-    label: 'Devops Engineer',
-    figure: '100K',
+    icon: IoLibrary,
+    label: 'NPM Libraries',
+    figure: '10',
+  },
+  {
+    id: '5',
+    icon: IoTrailSign,
+    label: 'Coding Challenges',
+    figure: '100',
   },
 ];

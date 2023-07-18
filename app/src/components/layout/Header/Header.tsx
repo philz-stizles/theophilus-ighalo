@@ -1,5 +1,7 @@
 'use client';
-import { Container, Navbar } from '@/components/layout';
+
+import { Button } from '@/components/ui';
+import { Container, Navbar } from '..';
 
 const Header = () => {
   return (
@@ -13,12 +15,10 @@ const Header = () => {
           </h2>
           <p className=" text-2xl font-light">
             I&apos;m a full stack developer based in{' '}
-            <strong className="font-bold">Africa</strong>. I build secure mobile
-            responsive web applications.
+            <strong className="font-bold">Africa</strong>. I build secure full
+            functional mobile-responsive web applications.
           </p>
-          <button className="px-6 py-3 border-2 border-slate-950 font-medium uppercase text-lg inline">
-            Let&apos;s Build Together
-          </button>
+          <Button>Let&apos;s Build Together</Button>
         </div>
       </Container>
     </header>

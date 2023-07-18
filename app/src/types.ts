@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons';
 
 export type Skill = {
   id: string;
@@ -10,18 +10,19 @@ export type Stat = {
   id: string;
   label: string;
   figure: string;
-  icon: IconType
+  icon: IconType;
 };
-
 
 export type Blog = {
   id: string;
   title: string;
-  description: string;
+  content: string;
   imageUrl: string;
-  images: string[];
-  category: Category;
-  comments?: Comment[]
+  images?: string[];
+  category?: Category;
+  comments?: Comment[];
+  author?: Author;
+  createdAt: string;
 };
 
 export type Category = {
@@ -35,4 +36,10 @@ export type Comment = {
   id: string;
   email: string;
   content: string;
+};
+
+export type Author = {
+  id?: string;
+  email?: string;
+  name: string;
 };

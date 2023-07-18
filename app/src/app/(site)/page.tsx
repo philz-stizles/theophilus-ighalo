@@ -1,10 +1,5 @@
-import {
-  AboutMe,
-  Portfolio,
-  Skills,
-  Stats,
-  Testimonials,
-} from '@/components/home';
+import { AboutMe, Contact, Portfolio, Skills, Stats, Testimonials } from './components';
+import Blog from './components/blog/blog';
 
 export default function Home() {
   return (
@@ -14,6 +9,8 @@ export default function Home() {
       <Portfolio />
       <Stats />
       <Testimonials />
+      <Blog />
+      <Contact />
     </main>
   );
 }

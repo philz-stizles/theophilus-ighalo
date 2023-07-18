@@ -1,10 +1,11 @@
-import './globals.css';
-import { Poppins, Raleway } from 'next/font/google';
+import '@/app/globals.css';
+import { Raleway } from 'next/font/google';
 import { Footer, Header } from '@/components/layout';
+import { ScrollButton } from '@/components/ui';
 
 const inter = Raleway({
   subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700']
+  weight: ['200', '300', '400', '500', '600', '700'],
 });
 
 export const metadata = {
@@ -12,7 +13,7 @@ export const metadata = {
   description: 'Online portfolio',
 };
 
-export default function RootLayout({
+export default function HomeLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ScrollButton />
       </body>
     </html>
   );

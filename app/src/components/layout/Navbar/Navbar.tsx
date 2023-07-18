@@ -3,25 +3,18 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
-import Hamburger from '@/components/ui/Hamburger/Hamburger';
+import { Hamburger } from '@/components/ui';
 import { Container } from '@/components/layout';
+import Image from 'next/image';
 
 const Navbar = () => {
-  const [colorChange, setColorchange] = useState(false);
-  // const changeNavbarColor = () => {
-  //   if (window && window.scrollY >= 80) {
-  //     setColorchange(true);
-  //   } else {
-  //     setColorchange(false);
-  //   }
-  // };
-  // window && window.addEventListener('scroll', changeNavbarColor);
+  const [colorChange, setColorChange] = useState(false);
   useEffect(() => {
     const changeNavbarColor = () => {
       if (window.scrollY >= 80) {
-        setColorchange(true);
+        setColorChange(true);
       } else {
-        setColorchange(false);
+        setColorChange(false);
       }
     };
     window.addEventListener('scroll', changeNavbarColor);
@@ -38,13 +31,22 @@ const Navbar = () => {
     >
       {/* <Hamburger onClick={() => {}} /> */}
       <Container className="flex items-center gap-6">
-        <div className="flex">
-          <div></div>
-          <div className="uppercase text-lg">
+        <div className="flex items-center gap-2">
+          <Image
+            className="rounded-full w-10 h-10 grayscale-0"
+            src="/images/theo_avatar.png"
+            alt="Avatar"
+            width={10}
+            height={10}
+          />
+
+          <div className="uppercase text-lg leading-none">
             <h1>
               Theophilus <strong>Ighalo</strong>
             </h1>
-            <p className="uppercase text-sm">Software Engineer</p>
+            <p className="text-sm">
+              <strong>Full stack</strong> Engineer
+            </p>
           </div>
         </div>
 
@@ -52,10 +54,10 @@ const Navbar = () => {
           <ul className="flex items-center gap-6">
             <NavItem href="/" label="Home" />
             <NavItem href="#portfolio" label="Portfolio" />
-            <NavItem href="#testimonials" label="Testimonials" />
+            <NavItem href="#services" label="Services" />
             <NavItem href="#about" label="About" />
-            <NavItem href="/blog" label="Blog" />
-            <NavItem href="/contact" label="Contact" />
+            <NavItem href="#blog" label="Blog" />
+            <NavItem href="#contact" label="Contact" />
           </ul>
         </nav>
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import useFetch from '@/hooks/useFetch';
 import { Blog } from '@/types';
 

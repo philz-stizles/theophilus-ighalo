@@ -1,6 +1,6 @@
 import '@/app/globals.css';
 import { Raleway } from 'next/font/google';
-import { Footer, Header, Navbar } from '@/components/layout';
+import { Footer, Navbar } from '@/components/layout';
 import { ScrollButton } from '@/components/ui';
 
 const inter = Raleway({

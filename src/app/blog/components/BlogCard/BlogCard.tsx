@@ -4,7 +4,7 @@ type Props = {
   blog: Blog;
 };
 
-const BlogCard = ({ blog: { title, description, imageUrl, images } }: Props) => {
+const BlogCard = ({ blog: { title, content, imageUrl, images } }: Props) => {
   return <div>BlogCard</div>;
 };
 

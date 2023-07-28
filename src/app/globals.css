@@ -8,10 +8,17 @@
   }
 }
 
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 body {
   position: relative;
   color: rgb(var(--foreground-rgb));
-  height: 100%;
+  
 }
 
 .app-shadow-b {
